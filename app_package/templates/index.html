@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{title}} -- Micro blog </title>
+    {% if title %}    
+        <title>{{title}} -- Micro blog </title>
+    {% else %}
+        <title>Home Page -- Micro blog </title>
+    {% endif %}
 </head>
 <body>
 <h1>Hello , {{user.name}}!</h1>
