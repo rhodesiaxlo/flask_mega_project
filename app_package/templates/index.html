@@ -9,5 +9,8 @@
 </head>
 <body>
 <h1>Hello , {{user.name}}!</h1>
+{% for post in posts %}
+    <div><p>{{post.author.name}} say:<b>{{post.body}}</b></p></div>
+{% endfor %}
 </body>
 </html>
