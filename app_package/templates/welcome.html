@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block  content %}
+    {% if name %}
+        <p>Welcome {{name}}</p>
+    {% else %}
+        <p>Welcome you-know-who-you-are</p>
+    {% endif %}
+{% endblock %}
