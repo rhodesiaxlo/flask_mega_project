@@ -1,5 +1,5 @@
 from app_package import app
-from flask import render_template,flash,redirect,request
+from flask import render_template,flash,redirect,request,url_for
 from app_package.forms import LoginForm
 
 @app.route("/")
@@ -30,7 +30,7 @@ def login():
     if form1.validate_on_submit():
        flash('Login requested for user {}, password {} remember_me={}'.format(
            form1.username.data, form1.password.data, form1.remember_me.data))
-       return redirect('/index')
+       return redirect(url_for("hello"))
     return render_template("login.html", title="Sign in", form=form1)
 
 @app.route('/welcome')
