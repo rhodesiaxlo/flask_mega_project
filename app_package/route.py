@@ -118,3 +118,6 @@ def edit_profile():
         form.username.data = current_user.username
         form.aboutme.data = current_user.aboutme
         return render_template("edit_profile.html", title="edit profile", form=form)
+
+
+
