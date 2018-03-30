@@ -21,6 +21,10 @@
             {{form.remember_me()}}{{form.remember_me.label}}
         </p>
         <p>
+            <input type="hidden" name="next_page"  type="password" value="{{next_page}}">
+            
+        </p>
+        <p>
             {{form.submit()}}
         </p>
     </form>
