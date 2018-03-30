@@ -1,10 +1,18 @@
 from app_package import app,db
 from flask import render_template,flash,redirect,request,url_for,request
-from app_package.forms import LoginForm,RegisterForm
+from app_package.forms import LoginForm,RegisterForm,EditprofileForm
 from flask_login import current_user,login_user,logout_user,login_required
 from app_package.models import User,Post
 from werkzeug.urls import url_parse
+from datetime import datetime
 import json
+
+
+@app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.utcnow()
+        db.session.commit()
 
 @app.route("/")
 @app.route("/index")
@@ -83,3 +91,30 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template("register.html", title="register", form=form)
+
+@app.route("/user/<username>")
+def user(username):
+    u = User.query.filter_by(username=username).first_or_404();
+    # post = [
+    #     'author':u,'body':'TEST POST # 1',
+    #     'author':u,'body':'TEST POST # 2',
+    # ]
+    posts = [
+        {'author': u, 'body': 'Test post #1'},
+        {'author': u, 'body': 'Test post #2'}
+    ]
+    return render_template("user.html", title="user", posts=posts, user=u)
+
+@app.route("/editprofile/", methods=["GET","POST"])
+@login_required
+def edit_profile():
+    form = EditprofileForm()
+    if form.validate_on_submit():
+        current_user.username = form.username.data
+        current_user.aboutme = form.aboutme.data
+        db.session.commit()
+        return redirect(url_for("edit_profile"))
+    elif request.method=="GET":
+        form.username.data = current_user.username
+        form.aboutme.data = current_user.aboutme
+        return render_template("edit_profile.html", title="edit profile", form=form)

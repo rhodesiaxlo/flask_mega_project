@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>User: {{user.username}}</h1>
+    {% if user.last_seen %}
+     <h1>Last Seen: {{user.last_seen}}</h1>
+    {% endif %}
+    {% if user.aboutme %}
+     <h1>About me: {{user.aboutme}}</h1>
+    {% endif %}
+    {% for post in posts %}
+        <hr>
+        <p>
+            {{post.author.username}} says:<b>{{post.body}}</b>
+        </p>
+    {% endfor %}
+{% endblock %}
