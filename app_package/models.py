@@ -5,6 +5,7 @@ from app_package import login
 from flask_login import UserMixin
 import jwt
 import time
+from hashlib import md5
 
 followers = db.Table('follwers',
     db.Column("follower_id",db.Integer,db.ForeignKey('user.id')),
@@ -28,6 +29,11 @@ class User(UserMixin,db.Model):
 
     def __repr__(self):
         return "< user {}>".format(self.username)
+
+    def avatar(self, size):
+        digest = md5(self.email.lower().encode('utf-8')).hexdigest()
+        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(
+            digest, size)
 
     def check_password(self,password):
         return check_password_hash(self.password_hash, password)
