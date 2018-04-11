@@ -63,7 +63,7 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
 
-        next_page = request.form.get('next_page')
+        next_page = request.args.get('next')
 
         if not user or not user.check_password(form.password.data):
             flash("invalid username or password")
@@ -75,7 +75,11 @@ def login():
 
         # 登陆2成功
         login_user(user, remember=form.remember_me.data)
-        return redirect(url_for("hello"))
+        
+        next_page = request.args.get('next')
+        # if not next_page or url_parse(next_page).netloc != '':
+        #     next_page = url_for('index')
+        return redirect(next_page)
        # flash('Login requested for user {}, password {} remember_me={}'.format(
        #     form1.username.data, form1.password.data, form1.remember_me.data))
        # return redirect(url_for("hello"))

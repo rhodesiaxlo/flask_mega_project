@@ -8,6 +8,8 @@ from logging.handlers import RotatingFileHandler
 import os
 from flask_mail import Mail
 
+from flask_bootstrap import Bootstrap
+
 app = Flask(__name__)
 
 # read config 
@@ -18,6 +20,8 @@ mail = Mail(app)
 
 login = LoginManager(app)
 login.login_view = "login"
+
+bootstrap = Bootstrap(app)
 
 
 from app_package import route, models, error
