@@ -1,0 +1,119 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-04-11 21:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: app_package/__init__.py:26
+msgid "Please log in to access this page."
+msgstr ""
+
+#: app_package/forms.py:8 app_package/forms.py:14 app_package/forms.py:32
+msgid "username"
+msgstr ""
+
+#: app_package/forms.py:9 app_package/forms.py:16 app_package/forms.py:17
+msgid "password"
+msgstr ""
+
+#: app_package/forms.py:10
+msgid "remember me"
+msgstr ""
+
+#: app_package/forms.py:11
+msgid "Sign in"
+msgstr ""
+
+#: app_package/forms.py:15
+msgid "email"
+msgstr ""
+
+#: app_package/forms.py:18 app_package/templates/register.html:5
+msgid "Register"
+msgstr ""
+
+#: app_package/forms.py:24
+msgid "please use a diffierent username"
+msgstr ""
+
+#: app_package/forms.py:29
+msgid "please use a diffierent email"
+msgstr ""
+
+#: app_package/forms.py:33
+msgid "aboutme"
+msgstr ""
+
+#: app_package/forms.py:34 app_package/forms.py:38
+msgid "Submit"
+msgstr ""
+
+#: app_package/forms.py:37
+msgid "body"
+msgstr ""
+
+#: app_package/forms.py:41
+msgid "Email"
+msgstr ""
+
+#: app_package/forms.py:42 app_package/forms.py:48
+msgid "Request Password Reset"
+msgstr ""
+
+#: app_package/forms.py:45
+msgid "Password"
+msgstr ""
+
+#: app_package/forms.py:47
+msgid "Repeat Password"
+msgstr ""
+
+#: app_package/route.py:69
+msgid "invalid username or password"
+msgstr ""
+
+#: app_package/templates/404.html:4
+msgid "File Not Found"
+msgstr ""
+
+#: app_package/templates/base.html:27
+msgid "Micro Blog"
+msgstr ""
+
+#: app_package/templates/base.html:33
+msgid "Home"
+msgstr ""
+
+#: app_package/templates/base.html:35 app_package/templates/login.html:5
+msgid "Login"
+msgstr ""
+
+#: app_package/templates/base.html:37
+msgid "Profile"
+msgstr ""
+
+#: app_package/templates/base.html:38 app_package/templates/base.html:41
+msgid "Editprofile"
+msgstr ""
+
+#: app_package/templates/base.html:39
+msgid "Logout"
+msgstr ""
+
+#: app_package/templates/base.html:42
+msgid "Welcome"
+msgstr ""
+

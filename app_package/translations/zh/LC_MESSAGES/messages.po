@@ -1,0 +1,120 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-04-11 21:29+0800\n"
+"PO-Revision-Date: 2018-04-11 21:29+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: app_package/__init__.py:26
+msgid "Please log in to access this page."
+msgstr "请先登陆"
+
+#: app_package/forms.py:8 app_package/forms.py:14 app_package/forms.py:32
+msgid "username"
+msgstr "用户名"
+
+#: app_package/forms.py:9 app_package/forms.py:16 app_package/forms.py:17
+msgid "password"
+msgstr "密码"
+
+#: app_package/forms.py:10
+msgid "remember me"
+msgstr "记住我"
+
+#: app_package/forms.py:11
+msgid "Sign in"
+msgstr "登录"
+
+#: app_package/forms.py:15
+msgid "email"
+msgstr "邮箱"
+
+#: app_package/forms.py:18 app_package/templates/register.html:5
+msgid "Register"
+msgstr "注册"
+
+#: app_package/forms.py:24
+msgid "please use a diffierent username"
+msgstr "请选择另外一个用户名"
+
+#: app_package/forms.py:29
+msgid "please use a diffierent email"
+msgstr "请选择另外一个邮箱"
+
+#: app_package/forms.py:33
+msgid "aboutme"
+msgstr "关于我们"
+
+#: app_package/forms.py:34 app_package/forms.py:38
+msgid "Submit"
+msgstr "提交"
+
+#: app_package/forms.py:37
+msgid "body"
+msgstr "主体"
+
+#: app_package/forms.py:41
+msgid "Email"
+msgstr "邮箱"
+
+#: app_package/forms.py:42 app_package/forms.py:48
+msgid "Request Password Reset"
+msgstr "请求密码重设"
+
+#: app_package/forms.py:45
+msgid "Password"
+msgstr "密码"
+
+#: app_package/forms.py:47
+msgid "Repeat Password"
+msgstr "再次输入密码"
+
+#: app_package/route.py:69
+msgid "invalid username or password"
+msgstr "用户名和密码的组合不正确"
+
+#: app_package/templates/404.html:4
+msgid "File Not Found"
+msgstr "找不到文件"
+
+#: app_package/templates/base.html:27
+msgid "Micro Blog"
+msgstr "微博"
+
+#: app_package/templates/base.html:33
+msgid "Home"
+msgstr "主页"
+
+#: app_package/templates/base.html:35 app_package/templates/login.html:5
+msgid "Login"
+msgstr "登录"
+
+#: app_package/templates/base.html:37
+msgid "Profile"
+msgstr "资料"
+
+#: app_package/templates/base.html:38 app_package/templates/base.html:41
+msgid "Editprofile"
+msgstr "编辑资料"
+
+#: app_package/templates/base.html:39
+msgid "Logout"
+msgstr "退出"
+
+#: app_package/templates/base.html:42
+msgid "Welcome"
+msgstr "欢迎"
+

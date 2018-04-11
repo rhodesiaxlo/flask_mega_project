@@ -24,22 +24,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Micro Blog</a>
+          <a class="navbar-brand" href="#">{{_('Micro Blog')}}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="{{url_for('hello')}}">Home</a></li>
+            <li><a href="{{url_for('hello')}}">{{_('Home')}}</a></li>
             {% if current_user.is_anonymous %}
-                <li><a href="{{url_for('login')}}">Login</a></li>
+                <li><a href="{{url_for('login')}}">{{_('Login')}}</a></li>
             {% else %}
-                <li><a href="{{ url_for('user', username=current_user.username) }}">Profile</a></li>
-                <li><a href="{{url_for('edit_profile')}}">Editprofile</a></li>
-                <li><a href="{{url_for('logout')}}">Logout</a></li>
+                <li><a href="{{ url_for('user', username=current_user.username) }}">{{_('Profile')}}</a></li>
+                <li><a href="{{url_for('edit_profile')}}">{{_('Editprofile')}}</a></li>
+                <li><a href="{{url_for('logout')}}">{{_('Logout')}}</a></li>
             {% endif %}
-            <li><a href="{{url_for('explore')}}">Editprofile</a></li>
-            <li><a href="/welcome?name=strange">Welcome</a></li>
+            <li><a href="{{url_for('explore')}}">{{_('Editprofile')}}</a></li>
+            <li><a href="/welcome?name=strange">{{_('Welcome')}}</a></li>
           </ul>
       
         </div><!-- /.navbar-collapse -->

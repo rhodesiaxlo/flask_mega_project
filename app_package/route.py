@@ -8,6 +8,7 @@ from app_package.email import send_password_reset_email
 from werkzeug.urls import url_parse
 from datetime import datetime
 import json
+from flask_babel import _,  lazy_gettext as _l
 
 
 @app.before_request
@@ -24,7 +25,6 @@ def hello():
     page = request.args.get('page', 1, type=int)
     if form.validate_on_submit():
         # 保存 post
-        print('hello world')
         post = Post(body=form.body.data, author=current_user)
         db.session.add(post)
         db.session.commit()
@@ -66,7 +66,8 @@ def login():
         next_page = request.args.get('next')
 
         if not user or not user.check_password(form.password.data):
-            flash("invalid username or password")
+            flash(_("invalid username or password"))
+
             # 登陆失败，如果有跳转页面，需要继续追加到 url 后面
             if next_page:
                 return redirect(url_for("login",next_page=next_page))
